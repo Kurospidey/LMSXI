@@ -1,0 +1,39 @@
+table {
+    margin-top: 5%;
+    border-spacing: 10px;
+    width: 100%;
+}
+
+table caption {
+    font-size: 5em;
+}
+
+table th, table td {
+    padding: 1%;
+}
+
+table tr:last-child td, table tr:last-child th {
+    background: initial;
+}
+
+table tr:nth-child(1) > th {
+    background: -webkit-linear-gradient(#D8D0B9, #B3A595);
+}
+
+table tr > th {
+    background: -webkit-linear-gradient(left, #D8D0B9, #B3A595)
+}
+
+table tr:nth-of-type(1) > th:nth-child(1) {
+    visibility: hidden;
+}
+
+table td {
+    text-align: center;
+    background-color: #ffe7c6;
+}
+
+table td > img {
+    vertical-align: middle;
+    height: 50px;
+}

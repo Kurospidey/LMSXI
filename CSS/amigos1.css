@@ -1,0 +1,20 @@
+::selection {
+    background-color: #1d18a5;
+    color: #ffd85c;
+}
+
+section#troncal {
+    margin-top: 5%;
+    font-family: 'Baqacents';
+    text-align: justify;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+    section#troncal header > img {
+        width: 100%;
+    }
+
+body > footer {
+    margin-top: 2%;
+}

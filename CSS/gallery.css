@@ -1,0 +1,207 @@
+/*
+            //################################################//
+            //#                                              #//
+            //#      TRABAJO SEGUNDA EVALUACIÓN LMSXI        #//
+            //#                                              #//
+            //#      Archivo: gallery.css                    #//
+            //#      Autor: Francisco J. Pájaro Rives        #//
+            //#      Última modificación: 2015-02-16         #//
+            //#                                              #//
+            //################################################//
+*/
+
+/*
+            //////////////////////////////////////////////////
+            ESTILOS PARA LAS PÁGINAS DE LA GALERÍA DE IMÁGENES
+            //////////////////////////////////////////////////
+*/
+
+section:nth-child(3) {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 35%;
+    left: 15%;
+}
+
+    /*Para conseguir un efecto no tan lineal en la colocación de las imágenes, le doy un position relative.*/
+    .contenedor {
+        position: absolute;
+        display: inline-block;
+        width: 27.5%;
+        height: 27.5%;
+        border-radius: 20px;
+        overflow: hidden; /*El alto sobrante de las imágenes no se verá (están ajustadas al width).*/
+    }
+
+        /*27.5 + 27.5 + 27.5 + 4.375 + 4.375 + 4.375 + 4.375 = 100*/
+
+        /*Elemento contenedor cuyo ordinal de hijo sea 1 más que un múltiplo de 3 (1, 4, 7). Las imágenes de la "columna" de la izquierda.*/
+        .contenedor:nth-child(3n+1) {
+            left: 6.75%;
+            top: 9%;
+            /*margin: 0 2.121875% 2% 4.24375%;*/
+        }
+
+        /*2, 5, 8 ==> la "columna" central.*/
+        .contenedor:nth-child(3n-1) {
+            top: 3%;
+            left: 36.25%;
+            /*margin: 0 2.121875% 2% 2.121875%;*/
+        }
+
+        /*3, 6, 9 ==> la "columna" de la derecha.*/
+        .contenedor:nth-child(3n) {
+            top: 9%;
+            left: 65.75%;
+            /*margin: 0 auto 2% 2.121875%;*/
+        }
+
+        .contenedor:nth-child(4) {
+            top: 40%;
+        }
+
+        .contenedor:nth-child(5) {
+            top: 36%;
+        }
+
+        .contenedor:nth-child(6) {
+            top: 40%;
+        }
+
+        .contenedor:nth-child(7) {
+            top: 71%;
+        }
+
+        .contenedor:nth-child(8) {
+            top: 67%;
+        }
+
+        .contenedor:nth-child(9) {
+            top: 71%;
+        }
+
+            .faldon {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                color: white;
+                opacity: 0; /*Al principio está oculto.*/
+                -webkit-transition: opacity 1s ease;
+                -moz-transition: opacity 1s ease;
+            }
+
+                .ampliar {
+                    position: absolute;
+                    display: block;
+                    bottom: 0px;
+                    right: 0px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 10px 0px 0px 0px;
+                    /*background-color: #ffcc00;*/
+                    background-color: #ecb300;
+                    opacity: 0;
+                    background-image: url('../img/galeria/Cruz2.png');
+                    background-size: 40px;
+                    -webkit-transition: opacity 3s ease;
+                    -moz-transition: opacity 3s ease;
+                }
+
+                .compartir { /*Comienza oculto porque está desplazado a la izquierda y su elemento contenedor tiene un overflow: hidden.*/
+                    position: absolute;
+                    top: 30px;
+                    left: -45px;
+                    overflow: hidden;
+                    background-color: rgba(200, 200, 200, 0.5);
+                    width: 40px;
+                    height: 90px;
+                    border-radius: 0px 8px 8px 0px;
+                    -webkit-transition: all 2s ease;
+                    -moz-transition: all 2s ease;
+                }
+
+                    .compartir a {
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        margin-left: 3px;
+                        background-size: 30px 30px;
+                    }
+
+                        .compartir li:nth-child(1) a {
+                            top: 10px;
+                            background-image: url('../img/galeria/FacebookLogo1.png');
+                        }
+
+                        .compartir li:nth-child(2) a {
+                            top: 50px;
+                            background-image: url('../img/galeria/TwitterLogo2.png');
+                        }
+
+            .thumbnail {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+                .thumbnail img {
+                    width: 100%; /*Las imágenes tienen altos distintos, pero las partes sobrantes están ocultas*/
+                    -webkit-transition: all 2s ease;
+                    -moz-transition: all 2s ease;
+                }
+
+/*
+            /////////////////////
+            COMPORTAMIENTOS HOVER
+            /////////////////////
+*/
+
+.contenedor:hover .thumbnail img {
+    -webkit-transform: scale(1.25) rotate(5deg);
+    -moz-transform: scale(1.25) rotate(5deg);
+}
+
+/*Le pongo el opacity a 1 y luego le añado transparencia solo al color de fondo para que se vean totalmente los enlaces que están dentro.*/
+.contenedor:hover .faldon {
+    opacity: 1;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .7);
+    /*border: 1px solid rgba(255, 255, 255, .5);*/
+    border: 3px solid #ecb300;
+}
+
+.contenedor:hover .ampliar {
+    opacity: 1;
+}
+
+.contenedor:hover .compartir {
+    -webkit-transform: translate(45px);
+    -moz-transform: translate(45px);
+}
+
+.ampliar:hover {
+    background-color: black;
+    background-image: url('../img/galeria/Cruz2b.png');
+}
+
+.compartir li:nth-child(1) a:hover {
+    background-image: url('../img/galeria/FacebookLogo1b.png');
+}
+
+.compartir li:nth-child(2) a:hover {
+    background-image: url('../img/galeria/TwitterLogo2b.png');
+}
+
+            /*REGLAS ESPECÍFICAS PIE*/
+body > footer {
+    clear: left;
+    position: absolute;
+    background-color: #D6D6D6;
+    font-size: 1.2em;
+    border-radius: 10px 10px 0 0;
+    bottom: -27%;
+    width: 100%;
+    overflow: visible;
+}

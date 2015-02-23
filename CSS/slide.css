@@ -1,0 +1,300 @@
+section:nth-child(4) {
+    position: fixed;
+    overflow: hidden;
+    /*background-color: rgba(200, 200, 200, .3);*/
+    background-color: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+    display: none;
+}
+
+#marco {
+    position: absolute;
+    border: 8px solid white;
+    background-color: black;
+    width: 70%;
+    height: 80%;
+    top: 10%;
+    left: 15%;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+#marco div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#marco div:nth-child(1) {
+    right: 100%;
+}
+
+#marco div:nth-child(3) {
+    left: 100%;
+}
+
+#marco #slideNav1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#slideNav1 a {
+    position: absolute;
+    background-size: 98%;
+    border-radius: 50%;
+    top: 47%;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    -webkit-transition: opacity 2s ease;
+    -moz-transition: opacity 2s ease;
+}
+
+#slideNav1 a:nth-child(1) {
+    left: 3%;
+    background-image: url('../img/galeria/Arrow1Left.png');
+}
+
+#slideNav1 a:nth-child(2) {
+    right: 3%;
+    background-image: url('../img/galeria/Arrow1Right.png');
+}
+
+#slideNav1 a:nth-child(3) {
+    left: 47%;
+    top: auto;
+    bottom: 3%;
+    background-image: url('../img/galeria/PlayButton1.png');
+}
+
+#marco #slideNav2 {
+    position: absolute;
+    right: 6%;
+    bottom: 6%;
+    width: 265px;
+    height: 8%;
+    padding: 0;
+    margin: 0;
+}
+
+#slideNav2 > a {
+    position: absolute;
+    opacity: 0;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 42%;
+    -webkit-transition: opacity 2s ease;
+    -moz-transition: opacity 2s ease;
+}
+
+#slideNav2 > a:nth-child(1) {
+    right: 238px;
+}
+
+#slideNav2 > a:nth-child(2) {
+    right: 210px;
+}
+
+#slideNav2 > a:nth-child(3) {
+    right: 182px;
+}
+
+#slideNav2 > a:nth-child(4) {
+    right: 154px;
+}
+
+#slideNav2 > a:nth-child(5) {
+    right: 126px;
+}
+
+#slideNav2 > a:nth-child(6) {
+    right: 98px;
+}
+
+#slideNav2 > a:nth-child(7) {
+    right: 70px;
+}
+
+#slideNav2 > a:nth-child(8) {
+    right: 42px;
+}
+
+#slideNav2 > a:nth-child(9) {
+    right: 14px;
+}
+
+#slideNav2 div {
+    position: absolute;
+    margin: 0 0 0 -1px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 100%;
+    list-style-type: none;
+}
+
+#slideNav2 div a {
+    position: absolute;
+    display: none;
+    opacity: .7;
+    background-size: 110%;
+    width: 90px;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+#slideNav2 div a:nth-child(1) {
+    right: 198px;
+}
+
+#slideNav2 div a:nth-child(2) {
+    right: 170px;
+}
+
+#slideNav2 div a:nth-child(3) {
+    right: 142px;
+}
+
+#slideNav2 div a:nth-child(4) {
+    right: 114px;
+}
+
+#slideNav2 div a:nth-child(5) {
+    right: 86px;
+}
+
+#slideNav2 div a:nth-child(6) {
+    right: 58px;
+}
+
+#slideNav2 div a:nth-child(7) {
+    right: 30px;
+}
+
+#slideNav2 div a:nth-child(8) {
+    right: 2px;
+}
+
+#slideNav2 div a:nth-child(9) {
+    right: -26px;
+}
+
+#marco:hover #slideNav1 a {
+    opacity: .2;
+}
+
+#marco #slideNav1 a:hover {
+    opacity: .5;
+}
+
+#marco:hover #slideNav2 > a {
+    opacity: 1;
+}
+
+#marco #slideNav2 > a:hover {
+    border: 1px solid orange;
+}
+
+section:nth-child(4) > a {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 6%;
+    right: 10%;
+    opacity: .5;
+}
+
+section:nth-child(4) > a:hover {
+    opacity: 1;
+}
+
+section:nth-child(4) > a img {
+    width: 100%;
+    height: 100%;
+}
+
+/*ANIMACIONES*/
+
+/*Genéricas*/
+@keyframes fromLeftToCenter {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes fromCenterToRight {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes fromRightToCenter {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes fromCenterToLeft {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+/*Chrome*/
+@-webkit-keyframes fromLeftToCenterC {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@-webkit-keyframes fromCenterToRightC {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@-webkit-keyframes fromRightToCenterC {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@-webkit-keyframes fromCenterToLeftC {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+}

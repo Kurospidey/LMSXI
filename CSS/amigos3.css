@@ -1,0 +1,154 @@
+/*FORMULARIO*/
+
+    /*Al tener los input dentro de un label, si se clica en el texto del label, se selecciona el input, por eso le cambio el cursor a pointer, para que se vea mejor.*/
+section#formulario {
+    margin-top: 4%;
+}
+
+    section#formulario label {
+        cursor: pointer;
+    }
+
+    /*Estoy utilizando pseudo-elementos para quitar las flechitas que aparecen en los input tipo número en el Chrome y en el Firefox.*/
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number]::-moz-inner-spin-button {
+        -moz-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number]::-moz-outer-spin-button {
+        -moz-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+section#formulario {
+    width: 70%;
+    margin-left: 15%;
+    font-family: 'Baqacents';
+    margin-bottom: 5%;
+}
+
+    section#formulario > form > ul {
+        position: relative;
+        width: 50%;
+        left: 25%;
+    }
+
+    section#formulario > form > ul > li {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+
+    section#formulario > form > ul > li:nth-last-child(2) {
+        position: initial;
+        float: left;
+        width: 25%;
+        margin-left: 25%;
+        text-align: center;
+    }
+
+    section#formulario > form > ul > li:nth-last-child(1) {
+        position: initial;
+        width: 25%;
+        text-align: center;
+    }
+
+        section#formulario > form > ul > li:nth-child(1) > img {
+            position: absolute;
+            width: 94px;
+            left: -16%;
+            top: 15%;
+        }
+
+        section#formulario > form > ul > li:nth-child(2) > img {
+            position: absolute;
+            width: 94px;
+            left: -16%;
+            top: 15%;
+        }
+
+        section#formulario > form > ul > li:nth-child(3) > img {
+            position: absolute;
+            width: 94px;
+            left: -16%;
+            top: 15%;
+        }
+
+        li > fieldset {
+            background-color: #FFF4E6;
+            margin: 0 0 2% 0;
+            padding: 2%;
+            border: 1px solid #936f00;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 3px;
+            box-shadow: inset 0px 0px 15px #bc8f00;
+            -webkit-box-shadow: inset 0px 0px 15px #bc8f00;
+            -moz-box-shadow: inset 0px 0px 15px #bc8f00;
+        }
+
+            li > fieldset > legend {
+                background-color: #FFF4E6;
+                border-top: 1px solid #936f00;
+                border-left: 1px solid #936f00;
+                border-right: 1px solid #936f00;
+                border-radius: 5px 5px 0 0;
+                -webkit-border-radius: 5px 5px 0 0;
+                -moz-border-radius: 3px;
+                padding: 0 8px 3px 8px;
+                box-shadow: inset -0px -1px 2px #bc8f00;
+                -webkit-box-shadow: inset -0px 1px 2px #bc8f00;
+                -moz-box-shadow: inset -0px -1px 2px #bc8f00;
+            }
+
+            li > fieldset > label {
+                display: block;
+            }
+
+                li > fieldset > label > span {
+                    display: inline-block;
+                    width: 33%;
+                }
+
+                li > fieldset > label > select, li > fieldset > label > input {
+                    border: 1px solid #935600;
+                    border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    box-shadow: inset 1px 1px 4px #bc6e00;
+                    -webkit-box-shadow: inset 1px 1px 4px #bc6e00;
+                    -moz-box-shadow: inset 1px 1px 4px #bc6e00;
+                    width: 50%;
+                    padding: 1% 1%;
+                    margin-bottom: 2%;
+                }
+
+                li > fieldset > label > input[type="checkbox"] {
+                    width: initial;
+                }
+
+            fieldset > fieldset {
+                border: none;
+            }
+
+        form > ul > li > input[type="reset"] , form > ul > li > input[type="submit" {
+            border: 1px solid black;
+            padding: 1% 3%;
+            box-shadow: inset -1px -1px 3px #000000;
+            -webkit-box-shadow: inset -1px -1px 3px #000000;
+            -moz-box-shadow: inset -1px -1px 3px #000000;
+        }
