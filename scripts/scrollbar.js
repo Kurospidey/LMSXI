@@ -20,7 +20,7 @@ function getScrollbarWidth() {
     // remove divs
     outer.parentNode.removeChild(outer);
 
-    window.alert(widthNoScroll - widthWithScroll);
+    /*window.alert(widthNoScroll - widthWithScroll);*/
 
     return widthNoScroll - widthWithScroll;
 }

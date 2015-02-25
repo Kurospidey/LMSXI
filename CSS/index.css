@@ -3,16 +3,16 @@
 .noticia { /*article dentro de un li*/
     float: left;
     position: relative; /*Tiene que ser relative porque necesito un contenedor para poner el tamaño de los img en porcentaje*/
-    width: 23.5%; /*No me hace falta cambiarlo a vw porque el elemento contenedor (la sección troncal) ya está en esta medida.*/
+    width: 23.5%;
     border: 1px solid #AAAAAA;
-    text-align: center;
+    text-align: justify;
     margin: 1% 2% 1% 0;
     overflow: hidden;
 }
 
 /*Tiene dos imágenes para el comportamiento hover.*/
 .noticia > img {
-    margin-bottom: 30%;
+    margin-bottom: 37%;
     vertical-align: bottom;
     width: 100%;
 }
@@ -33,8 +33,9 @@
 .noticia > .entradilla {
     position: absolute;
     width: 100%;
-    height: 35%;
+    height: 40%;
     bottom: 0%;
+    padding: 0 5%;
     background-color: black;
     color: white;
     -webkit-transition: background 1s;
@@ -47,13 +48,16 @@
 
 .noticia > .entradilla > time {
     display: block;
+    text-align: center;
     font-family: 'C&L';
     font-size: 0.75vw; /*14.4px en un ancho de 1920*/
 }
 
 .noticia > .entradilla > h3 {
+    text-align: center;
     font-family: 'C&L';
     font-size: 1.25vw; /*24px en un ancho de 1920*/
+    margin-bottom: 3%;
 }
 
 .noticia > .entradilla > p {
