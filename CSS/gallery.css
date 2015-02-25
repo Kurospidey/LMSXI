@@ -17,19 +17,23 @@
 */
 
 section:nth-child(3) {
-    position: absolute;
-    width: 70%;
-    height: 70%;
-    top: 35%;
+    /*position: absolute;*/
+    clear: left;
+    /*width: 70%;*/
+    width: 70vw;
+    /*height: 70%;*/
+    /*top: 35%;*/
     left: 15%;
 }
 
     /*Para conseguir un efecto no tan lineal en la colocación de las imágenes, le doy un position relative.*/
     .contenedor {
-        position: absolute;
+        /*position: absolute;*/
+        position: relative;
         display: inline-block;
-        width: 27.5%;
-        height: 27.5%;
+        /*width: 27.5%;*/
+        width: 19.25vw;
+        height: 10.83vw; /*aspect ratio de 16:9 en cualquier monitor*/
         border-radius: 20px;
         overflow: hidden; /*El alto sobrante de las imágenes no se verá (están ajustadas al width).*/
     }
