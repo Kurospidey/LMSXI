@@ -1,18 +1,45 @@
             /*FUENTES*/
 
-@font-face {
-    font-family: 'C&L';
-    src: url('../fuentes/Champagne_&_Limousines.ttf');
-}
-
-@font-face {
-    font-family: 'Baqacents';
-    src: url('../fuentes/Baqacents Semibold.ttf');
-}
-
+/*Para la barra de navegación principal.*/
 @font-face {
     font-family: 'Euphorigenic';
     src: url('../fuentes/euphorigenic.ttf');
+}
+
+/*Para las etiquetas time y textos aparte.*/
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('../fuentes/CaviarDreams.ttf');
+}
+
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('../fuentes/CaviarDreams_Bold.ttf');
+    font-weight: bold;
+}
+
+/*Para los titulares de las noticias.*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fuentes/Roboto_Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fuentes/Roboto_Regular.ttf');
+    font-weight: bold;
+}
+
+/*Para los párrafos de las noticias.*/
+@font-face {
+    font-family: 'Baqacents';
+    src: url('../fuentes/Baqacents_Semibold.ttf');
+}
+
+/*Para la primera letra de cada párrafo de las noticias.*/
+@font-face {
+    font-family: 'Althea';
+    src: url('../fuents/Althea.ttf');
 }
 
             /*REGLAS GENERALES*/
@@ -92,7 +119,9 @@ body > nav {
     width: 70%;
     text-align: center;
     font-family: 'Euphorigenic';
-    font-size: 1.25vw; /*1em son 16px; 1.25vw son 24px en un ancho de 1920px (mi monitor), 12.8px en un ancho de 1024px (el monitor del proyector).*/
+    font-size: 1.5vw; /*1em son 16px; 1.25vw son 24px en un ancho de 1920px (mi monitor), 12.8px en un ancho de 1024px (el monitor del proyector).*/
+    /*border: 1px solid #AAAAAA;*/
+    border-radius: 10px 10px 0 0;
 }
 
 /*Opciones principales*/
@@ -100,7 +129,6 @@ body > nav {
     position: relative; /*necesito posicionar cada opción con relative para hacer de referencia, porque los submenús están en absolute*/
     float: left;
     width: 20%;
-    /*margin-top: 1%;*/
     border-bottom: 1px solid #AAAAAA;
 }
 
@@ -169,6 +197,7 @@ body > footer {
     bottom: 0%;
     width: 100%;
     padding: 0.5% 0 1% 0;
+    font-family: 'Times New Roman';
 }
 
 /*Breadcrumbs*/
@@ -204,7 +233,7 @@ body > footer {
     float: left;
     background-color: #B3A595;
     height: 1vw;
-    padding: 3% 0%;
+    padding: 1% 0 0 0;
 }
 
 #breadcrumbs > li:last-of-type > a > span {
@@ -245,8 +274,9 @@ body > footer dl > dt, body > footer dl > dd {
     margin-bottom: 2%
 }
 
-/*Enlaces*/
+/*Ees*/
 #social > dd > a {
+    width: 100%;
     position: relative;
 }
 
@@ -278,3 +308,15 @@ body > footer > img:last-of-type {
     width: 11%;
     bottom: 0%;
 }
+
+/*svg {
+    position: relative;
+    width: 100%;
+    height: 1%;
+    z-index: 5;
+}
+
+svg > line {
+    stroke: #0e0a66;
+    stroke-width: 2;
+}*/

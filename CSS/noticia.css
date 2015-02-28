@@ -1,0 +1,174 @@
+/*El artículo que constituye la noticia, que está formado por: un div con diversos enlaces e información, un titular, una imagen, y los párrafos con el texto.*/
+#noticia {
+    text-align: justify;
+    margin-top: 2vw;
+    background-color: white;
+    padding: 1%;
+    box-shadow: 0px 0px 25px #aaaaaa;
+    -webkit-box-shadow: 0px 0px 25px #aaaaaa;
+    -moz-box-shadow: 0px 0px 25px #aaaaaa;
+}
+
+/*Este elemento no tiene ningún valor semántico, simplemente visual.*/
+#noticia > div {
+    border-top: 3px dashed #AAAAAA;
+    border-bottom: 3px dashed #AAAAAA;
+    font-family: 'CaviarDreams';
+    font-size: 1.25vw;
+    padding: 1% 0;
+    margin-left: 10%;
+    width: 80%;
+}
+
+/*Este address tiene información de la noticia: el autor con su foto (que es un enlace hacia su email para contactar con él), y la fecha y hora de publicación de la misma.*/
+#noticia > div > address {
+    display: inline-block;
+    width: 70%;
+    font-style: normal;
+    padding-left: 3%;
+}
+
+#noticia > div > address > a {
+    overflow: hidden;
+    display: inline-block;
+    width: 3.5vw;
+    height: 4vw;
+    vertical-align: bottom;
+    border-radius: 1vw;
+    border: 2px solid black;
+    -webkit-transition: transform 1s, border 1s;
+    -moz-transition: transform 1s, border 1s;
+}
+
+#noticia > div > address > a > img {
+    position: relative;
+    left: -5%;
+    width: 110%;
+}
+
+#noticia > div > address > a:hover {
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    border-color: #ec8a00;
+}
+
+#noticia > div > address > span {
+    display: inline-block;
+    border-right: 1px solid #aaaaaa;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#noticia > div > address > time {
+    display: inline-block;
+    padding-left: 1%;
+}
+
+/*div .compartir con enlaces que llevan al usuario a las distintas redes sociales en las que puede compartir la noticia.*/
+#noticia > div > .compartir {
+    display: inline-block;
+    width: 28%;
+    height: 100%;
+    text-align: center;
+}
+
+#noticia > div > .compartir > ul > li > a {
+    box-sizing: content-box;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 2vw;
+    height: 2vw;
+    background-size: 50%;
+    border-radius: 50%;
+    -moz-transition: transform 1s, border 1s;
+    -webkit-transition: transform 1s, border 1s;
+    border: 2px solid black;
+}
+
+#noticia > div > .compartir > ul > li > a:hover {
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    border-color: #ec8a00;
+}
+
+.compartir > ul > li:nth-child(1) > a {
+    background-image: url('../img/enlaces/TwitterLetra1.png');
+    background-color: #37b9db;
+}
+
+.compartir > ul > li:nth-child(2) > a {
+    background-image: url('../img/enlaces/FacebookLetra1.png');
+    background-color: #345fa0;
+}
+
+.compartir > ul > li:nth-child(3) > a {
+    background-image: url('../img/enlaces/TumblrLetra1.png');
+    background-color: #1e4863;
+}
+
+/*Acaba la meta-información, ahora empieza la noticia en sí.*/
+#noticia > h1 {
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 3vw;
+    margin: 0.75vw 0;
+}
+
+#noticia > figure {
+    text-align: center;
+    font-family: 'CaviarDreams';
+    font-size: 0.9vw;
+    font-family: 'Arial';
+    font-style: italic;
+    margin-bottom: 1vw;
+}
+
+#noticia > figure > img {
+    width: 66.7%;
+    border: 1px solid #AAAAAA;
+}
+
+#noticia > p {
+    font-family: 'Baqacents';
+    font-size: 1.25vw;
+    margin: 0 3.75vw 1vw 3.75vw;
+}
+
+#noticia > p:first-of-type::first-letter {
+    font-family: 'Althea';
+    font-size: 3vw;
+}
+
+/*Navegación secundaria, para recorrer las noticias una a una dentro del mismo nivel.*/
+#troncal > nav > a {
+    position: fixed;
+    top: 22vw;
+    width: 5vw;
+    height: 5vw;
+    background-size: 100% 100%;
+    opacity: 0.2;
+    -webkit-transition: opacity 2s ease, background 2s ease;
+    -moz-transition: opacity 2s ease, background 2s ease;
+}
+
+#troncal > nav > a:nth-child(1) {
+    left: 2vw;
+    background-image: url('../img/noticias/Izquierda.png');
+}
+
+#troncal > nav > a:nth-child(2) {
+    right: 2vw;
+    background-image: url('../img/noticias/Derecha.png');
+}
+
+#troncal > nav > a:hover {
+    opacity: 0.8;
+}
+
+#troncal > nav > a:nth-child(1):hover {
+    background-image: url('../img/noticias/Izquierdab.png');
+}
+
+#troncal > nav > a:nth-child(2):hover {
+    background-image: url('../img/noticias/Derechab.png');
+}

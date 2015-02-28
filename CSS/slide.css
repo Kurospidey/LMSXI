@@ -248,7 +248,6 @@ section:nth-of-type(2) > a img {
 
 /*ANIMACIONES*/
 
-/*Genéricas*/
 @keyframes fromLeftToCenter {
     0% {
         left: -100%;
@@ -284,41 +283,3 @@ section:nth-of-type(2) > a img {
         left: -100%;
     }
 }
-
-/*Chrome*/
-/*Estás reglas dan error en el validador de CSS porque dice que las keyframes con el prefijo -webkit- no están implementadas todavía. Sin embargo, en w3schools las ponen de ejemplo de animación para Chrome. Por lo tanto, siguiendo los consejos de w3schools he decidido implementarlas para el slider.*/
-/*@-webkit-keyframes fromLeftToCenterC {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 0%;
-    }
-}
-
-@-webkit-keyframes fromCenterToRightC {
-    0% {
-        left: 0%;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
-@-webkit-keyframes fromRightToCenterC {
-    0% {
-        left: 100%;
-    }
-    100% {
-        left: 0%;
-    }
-}
-
-@-webkit-keyframes fromCenterToLeftC {
-    0% {
-        left: 0%;
-    }
-    100% {
-        left: -100%;
-    }
-}*/

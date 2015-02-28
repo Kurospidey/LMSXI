@@ -49,15 +49,17 @@
 .noticia > .entradilla > time {
     display: block;
     text-align: center;
-    font-family: 'C&L';
+    font-family: 'CaviarDreams';
+    font-weight: bold;
     font-size: 0.75vw; /*14.4px en un ancho de 1920*/
+    margin-bottom: 0.6vw;
 }
 
 .noticia > .entradilla > h3 {
     text-align: center;
-    font-family: 'C&L';
+    font-family: 'Roboto';
     font-size: 1.25vw; /*24px en un ancho de 1920*/
-    margin-bottom: 3%;
+    margin-bottom: 0.4vw;
 }
 
 .noticia > .entradilla > p {
