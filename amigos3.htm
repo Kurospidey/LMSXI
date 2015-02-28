@@ -12,81 +12,95 @@
         </header>
         <nav>
             <ul>
-                <li>
+                <li class="opcion">
                     <a href="index.htm">Noticias</a>
-                    <ul>
+                    <ul class="submenu">
                         <li><a href="#">Política</a></li>
                         <li><a href="#">Economía</a></li>
                         <li><a href="#">Cultura</a></li>
                         <li><a href="#">Deportes</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="opcion">
                     <a href="#">Turismo</a>
-                    <ul>
+                    <ul class="submenu">
                         <li><a href="#">Vivamus at risus</a></li>
                         <li><a href="#">Donec vestibulum sed</a></li>
                         <li><a href="#">Nulla sodales vestibulum</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="opcion">
                     <a href="#">Historia</a>
-                    <ul>
+                    <ul class="submenu">
                         <li><a href="#">Vestibulum scelerisque ipsum</a></li>
                         <li><a href="#">Quisque cursus eros</a></li>
                         <li><a href="#">Nullam id placerat</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="opcion">
                     <a href="gallery1.htm">Galería</a>
-                    <ul>
+                    <ul class="submenu">
                         <li><a href="#">Nunc erat urna</a></li>
                         <li><a href="#">Curabitur vitae nunc</a></li>
                         <li><a href="#">Nulla quis dui</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="opcion">
                     <a href="amigos1.htm">Amigos de la catedral</a>
-                    <ul>
+                    <ul class="submenu">
                         <li><a href="amigos2.htm">Tarifas</a></li>
                         <li><a href="amigos3.htm">Suscríbete</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
-        <section id="formulario">
+        <section id="troncal">
             <form action="action_page.php" method="GET">
                 <ul>
                     <li>
                         <img src="img/formulario/DatosPersonales1.png" alt="prueba" />
                         <fieldset>
                             <legend>Datos personales</legend>
-                            <label><span>Nombre: </span> <input type="text" name="nombre" /></label>
-                            <label><span>Apellidos: </span> <input type="text" name="apellidos" /></label>
-                            <label><span>Fecha de nacimiento: </span> <input type="date" name="nacimiento" /></label>
+                            <!--Patrón: la 1ª letra tiene que empezar por mayúscula, después vienen de 1 a 20 letras minúsculas. Solo valen letras (incluída la ñ), aunque pueden llevar tilde.-->
+                            <label><span>Nombre: </span> <input type="text" name="nombre" autofocus="autofocus" required="required" pattern="(^[A-ZÑÁÉÍÓÚ]+[a-zñáéíóú]{1,20})" placeholder="Pepito" /></label>
+                            <!--Patrón: igual que el anterior, pero para cada apellido y con un espacio por el medio.-->
+                            <label><span>Apellidos: </span> <input type="text" name="apellidos" required="required" pattern="(^[A-ZÑÁÉÍÓÚ]+[a-zñáéíóú]{1,20})+[ ]+([A-ZÑÁÉÍÓÚ]+[a-zñáéíóú]{1,20})" placeholder="Pérez Vázquez" /></label>
+                            <!--Podría haberlo puesto type="date" pero no es reconocido bien por el Firefox, además así le puedo poner patrones de validación (los tipo date no los aceptan).-->
+                            <!--Patrón: 2 números + barra inclinada + 2 números + barra inclinada + 4 números.-->
+                            <label><span>Fecha de nacimiento: </span> <input type="text" name="nacimiento" required="required" pattern="(^[0-9]{2})+[/]+([0-9]{2})+[/]+([0-9]{4})" placeholder="dd/mm/aaaa" /></label>
                             <label><span>Sexo: </span>
-                                <select name="sexo">
+                                <select name="sexo" required="required">
                                     <option value="" hidden="hidden">&nbsp;</option>
                                     <option value="hombre">Hombre</option>
                                     <option value="mujer">Mujer</option>
                                 </select>
                             </label>
-                            <label><span>Provincia: </span> <input type="text" name="provincia" /></label>
-                            <label><span>Localidad: </span> <input type="text" name="localidad" /></label>
-                            <label><span>Código Postal: </span> <input type="number" name="cp" /></label>
-                            <label><span>Dirección: </span> <input type="text" name="direccion" /></label>
-                            <label><span>Teléfono de contacto: </span> <input type="tel" name="telefono" /></label>
+                            <!--Patrón: primero como mínimo una letra, después opcionalmente un espacio y otra cadena de como mínimo 2 letras (para adaptarse a nombres como A Coruña o La Coruña). Cada cadena ha de empezar por mayúscula.-->
+                            <label><span>Provincia: </span> <input type="text" name="provincia" required="required" pattern="(^[A-ZÑÁÉÍÓÚ]+[a-zñáéíóú]{0,20})+([ ]+([A-ZÑÁÉÍÓÚ]+[a-zñáéíóú]{1,20})){0,1}" placeholder="A Coruña" /></label>
+                            <!--Patrón: igual que para la provincia.-->
+                            <label><span>Localidad: </span> <input type="text" name="localidad" required="required" pattern="(^[A-ZÑÁÉÍÓÚ]+[a-zñáéíóú]{0,20})+([ ]+([A-ZÑÁÉÍÓÚ]+[a-zñáéíóú]{1,20})){0,1}" placeholder="Santiago" /></label>
+                            <!--Patrón: 5 y solo 5 números (pongo el input tipo texto en vez de tipo número para poder aplicar reglas de validación, además tanto los códigos postales como los teléfonos no se utilizan para realizar operaciones matemáticas).-->
+                            <label><span>Código Postal: </span> <input type="text" name="cp" required="required" pattern="[0-9]{5}" placeholder="15700" /></label>
+                            <!--Este no lo valido porque hay un montón de combinaciones distintas.-->
+                            <label><span>Dirección: </span> <input type="text" name="direccion" required="required" placeholder="Rúa de San Pedro, nº7, 2ºA" /></label>
+                            <!--Patrón: 9 y solo 9 números.-->
+                            <label><span>Teléfono de contacto: </span> <input type="tel" name="telefono" required="required" pattern="[0-9]{9}" placeholder="981585040" /></label>
                         </fieldset>
                     </li>
                     <li>
                         <img src="img/formulario/DatosCuenta2.png" alt="prueba" />
                         <fieldset>
                             <legend>Datos de la cuenta</legend>
-                            <label><span>Nombre de usuario: </span> <input type="text" name="usuario" /></label>
-                            <label><span>Dirección de correo: </span> <input type="email" name="correo1" /></label>
-                            <label><span>Escríbela de nuevo: </span> <input type="email" name="correo2" /></label>
-                            <label><span>Contraseña: </span> <input type="password" name="contraseña1" /></label>
-                            <label><span>Escríbela de nuevo: </span> <input type="password" name="contraseña2" /></label>
+                            <!--Patrón: primero una letra, después cualquier letra, número o ciertos caracteres especiales. No acepta letras con tildes. Como mínimo el nombre de usuario tendrá dos caracteres, como máximo 20.-->
+                            <label><span>Nombre de usuario: </span> <input type="text" name="usuario" required="required" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" /></label>
+                            <!--Patrón: Primero tiene que empezar por una letra, después pueden ir como mínimo dos caracteres más y como máximo 14. Estos caracteres podrán ser letras, números y algunos caracteres especiales. Luego viene una arroba. Después viene una cadena de solo letras de como mínimo 3 y como máximo 15 caracteres de longitud. Luego viene el punto. Por último viene una cadena de solo letras de 2 o 3 caracteres de longitud.-->
+                            <label><span>Dirección de correo: </span> <input type="email" name="correo1" required="required" pattern="^[a-zA-Z][a-zA-Z0-9-_.]{2,14}[@][a-zAz]{3,15}[.][a-zA-Z]{2,3}$" placeholder="pepito@ejemplo.es" /></label>
+                            <!--Patrón: igual que el anterior.-->
+                            <label><span>Escríbela de nuevo: </span> <input type="email" name="correo2" required="required" pattern="^[a-zA-Z][a-zA-Z0-9-_.]{2,14}[@][a-zAz]{3,15}[.][a-zA-Z]{2,3}$" placeholder="pepito@ejemplo.es" /></label>
+                            <!--Patrón: mira que la contraseña tenga, por lo menos (?=.*): un número, una letra minúscula, y una letra mayúscula. Luego también verifica que no tenga (?!.*) ningún espacio en blanco.-->
+                            <label><span>Contraseña: </span> <input type="password" name="contraseña1" required="required" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="Abc123" /></label>
+                            <!--Patrón: igual que el anterior.-->
+                            <label><span>Escríbela de nuevo: </span> <input type="password" name="contraseña2" required="required" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="Abc123" /></label>
                             <fieldset>
                                 <legend>Deseo recibir mensajes a mi correo con noticias de interés: </legend>
                                     <ul>
@@ -101,7 +115,7 @@
                         <fieldset>
                             <legend>Datos de suscripción</legend>
                             <label><span>Tipo de amigo: </span>
-                                <select name="tipoAmigo">
+                                <select name="tipoAmigo" required="required">
                                     <option value="" hidden="hidden">&nbsp;</option>
                                     <option value="colaborador">Colaborador</option>
                                     <option value="amigo">Amigo</option>
@@ -110,7 +124,7 @@
                                 </select>
                             </label>
                             <label><span>Periodicidad de la suscripción: </span>
-                                <select name="perSus">
+                                <select name="perSus" required="required">
                                     <option value="" hidden="hidden">&nbsp;</option>
                                     <option value="mensual">Mensual</option>
                                     <option value="trimestral">Trimestral</option>
@@ -119,7 +133,7 @@
                                 </select>
                             </label>
                             <label><span>Forma de pago: </span>
-                                <select name="fPago">
+                                <select name="fPago" required="required">
                                     <option value="" hidden="hidden">&nbsp;</option>
                                     <option value="paypal">Paypal</option>
                                     <optgroup label="Tarjeta de Crédito">
@@ -133,6 +147,7 @@
                             <label><input type="checkbox" name="renovar" value="1" checked="checked" />Renovar suscripción automáticamente</label>
                         </fieldset>
                     </li>
+                    <!--No me hace falta poner el atributo name a los botones porque no van a enviar su valor al servidor.-->
                     <li>
                         <input type="reset" value="Restablecer" />
                     </li>
@@ -140,45 +155,81 @@
                         <input type="submit" value="Enviar" />
                     </li>
                 </ul>
-                <!--No me hace falta poner el atributo name a los botones porque no van a enviar su valor al servidor.-->
             </form>
         </section>
         <footer>
-            <!--<img src="img/fondos/Background1b.png" alt="prueba" />-->
+            <ul id="breadcrumbs">
+                <li>
+                    <a href="amigos1.htm">
+                        <img src="img/BreadcrumbsLeft.png" alt="prueba" />
+                        <span>Amigos de la catedral</span>
+                        <img src="img/BreadcrumbsRight.png" alt="prueba" />
+                    </a>
+                </li>
+                <li>
+                    <a href="amigos3.htm">
+                        <img src="img/BreadcrumbsLeftB.png" alt="prueba" />
+                        <span>Suscríbete</span>
+                        <img src="img/BreadcrumbsRightB.png" alt="prueba" />
+                    </a>
+                </li>
+            </ul>
+            <address>
+                <dl id="social">
+                    <!--Obviamente los enlaces no llevan a ninguna cuenta en concreto.-->
+                    <dt><a href="#">Socializa con nosotros</a></dt>
+                    <dd>
+                        <a href="https://twitter.com">
+                            <img src="img/galeria/TwitterLogo2.png" alt="prueba" />
+                            <img src="img/galeria/TwitterLogo2c.png" alt="prueba" />
+                            <span>Síguenos en Twitter</span>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://www.facebook.com">
+                            <img src="img/galeria/FacebookLogo1.png" alt="prueba" />
+                            <img src="img/galeria/FacebookLogo1c.png" alt="prueba" />
+                            <span>Síguenos en Facebook</span>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://www.tumblr.com/">
+                            <img src="img/galeria/TumblrLogo1.png" alt="prueba" />
+                            <img src="img/galeria/TumblrLogo1c.png" alt="prueba" />
+                            <span>Síguenos en Tumblr</span>
+                        </a>
+                    </dd>
+                </dl>
+            </address>
             <dl>
-                <dt>Socializa con nosotros</dt>
-                <dd>Síguenos en Twitter</dd>
-                <dd>Síguenos en Facebook</dd>
-                <dd>Síguenos en Tumblr</dd>
+                <dt><a href="index.htm">Noticias</a></dt>
+                <dd><a href="#">Política</a></dd>
+                <dd><a href="#">Economía</a></dd>
+                <dd><a href="#">Cultura</a></dd>
+                <dd><a href="#">Deportes</a></dd>
             </dl>
             <dl>
-                <dt>Noticias</dt>
-                <dd>Política</dd>
-                <dd>Economía</dd>
-                <dd>Cultura</dd>
-                <dd>Deportes</dd>
+                <dt><a href="#">Turismo</a></dt>
+                <dd><a href="#">Vivamus at risus</a></dd>
+                <dd><a href="#">Donec vestibulum sed</a></dd>
+                <dd><a href="#">Nulla sodales vestibulum</a></dd>
             </dl>
             <dl>
-                <dt>Turismo</dt>
-                <dd>Vivamus at risus</dd>
-                <dd>Donec vestibulum sed</dd>
-                <dd>Nulla sodales vestibulum</dd>
+                <dt><a href="#">Historia</a></dt>
+                <dd><a href="#">Vestibulum scelerisque ipsum</a></dd>
+                <dd><a href="#">Quisque cursus eros</a></dd>
+                <dd><a href="#">Nullam id placerat</a></dd>
             </dl>
             <dl>
-                <dt>Historia</dt>
-                <dd>Vestibulum scelerisque ipsum</dd>
-                <dd>Quisque cursus eros</dd>
-                <dd>Nullam id placerat</dd>
+                <dt><a href="gallery1.htm">Galería</a></dt>
+                <dd><a href="gallery1.htm">Nunc erat urna</a></dd>
+                <dd><a href="gallery1.htm">Curabitur vitae nunc</a></dd>
+                <dd><a href="gallery1.htm">Nulla quis dui</a></dd>
             </dl>
             <dl>
-                <dt>Galería</dt>
-                <dd>Nunc erat urna</dd>
-                <dd>Curabitur vitae nunc</dd>
-                <dd>Nulla quis dui</dd>
-            </dl>
-            <dl>
-                <dt>Amigos de la catedral</dt>
-                <dd>Colabora</dd>
+                <dt><a href="amigos1.htm">Amigos de la catedral</a></dt>
+                <dd><a href="amigos2.htm">Tarifas</a></dd>
+                <dd><a href="amigos3.htm">Suscríbete</a></dd>
             </dl>
             <img src="img/renders/Catedral1.png" alt="prueba" />
         </footer>

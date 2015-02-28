@@ -1,27 +1,31 @@
 table {
-    margin-top: 5%;
-    border-spacing: 10px;
+    margin-top: 2.5vw;
+    border-spacing: 0.52083vw;
     width: 100%;
 }
 
 table caption {
-    font-size: 5em;
+    font-size: 7vw;
+    font-family: 'C&L';
 }
 
 table th, table td {
-    padding: 1%;
+    padding: 0.7vw;
+    font-family: 'Baqacents';
 }
 
 table tr:last-child td, table tr:last-child th {
     background: initial;
+    padding: 0.7vw 0 0 0;
+    font-size: 1.5vw;
 }
 
 table tr:nth-child(1) > th {
-    background: -webkit-linear-gradient(#D8D0B9, #B3A595);
+    background: -moz-linear-gradient(#D8D0B9, #B3A595);
 }
 
 table tr > th {
-    background: -webkit-linear-gradient(left, #D8D0B9, #B3A595)
+    background: -moz-linear-gradient(left, #D8D0B9, #B3A595)
 }
 
 table tr:nth-of-type(1) > th:nth-child(1) {

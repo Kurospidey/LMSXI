@@ -1,7 +1,6 @@
-section:nth-child(4) {
+section:nth-of-type(2) {
     position: fixed;
     overflow: hidden;
-    /*background-color: rgba(200, 200, 200, .3);*/
     background-color: rgba(0, 0, 0, .9);
     width: 100%;
     height: 100%;
@@ -13,13 +12,13 @@ section:nth-child(4) {
 
 #marco {
     position: absolute;
-    border: 8px solid white;
+    border: 0.52083vw solid white;
     background-color: black;
-    width: 70%;
-    height: 80%;
+    width: 70vw;
+    height: 39.375vw; /*aspect ratio siempre de 16:9*/
     top: 10%;
-    left: 15%;
-    border-radius: 60px;
+    left: 14.6vw;
+    border-radius: 3.125vw;
     overflow: hidden;
 }
 
@@ -48,8 +47,8 @@ section:nth-child(4) {
     background-size: 98%;
     border-radius: 50%;
     top: 47%;
-    width: 50px;
-    height: 50px;
+    width: 2.6042vw;
+    height: 2.6042vw;
     opacity: 0;
     -webkit-transition: opacity 2s ease;
     -moz-transition: opacity 2s ease;
@@ -76,7 +75,7 @@ section:nth-child(4) {
     position: absolute;
     right: 6%;
     bottom: 6%;
-    width: 265px;
+    width: 20.27039vw;
     height: 8%;
     padding: 0;
     margin: 0;
@@ -86,8 +85,8 @@ section:nth-child(4) {
     position: absolute;
     opacity: 0;
     background-color: red;
-    width: 10px;
-    height: 10px;
+    width: 0.52083vw;
+    height: 0.52083vw;
     border-radius: 50%;
     top: 42%;
     -webkit-transition: opacity 2s ease;
@@ -95,44 +94,56 @@ section:nth-child(4) {
 }
 
 #slideNav2 > a:nth-child(1) {
-    right: 238px;
+    right: 17.81209vw;
 }
 
 #slideNav2 > a:nth-child(2) {
-    right: 210px;
+    right: 16.35379vw;
 }
 
 #slideNav2 > a:nth-child(3) {
-    right: 182px;
+    right: 14.89549vw;
 }
 
 #slideNav2 > a:nth-child(4) {
-    right: 154px;
+    right: 13.43719vw;
 }
 
 #slideNav2 > a:nth-child(5) {
-    right: 126px;
+    right: 11.97889vw;
 }
 
 #slideNav2 > a:nth-child(6) {
-    right: 98px;
+    right: 10.52059vw;
 }
 
 #slideNav2 > a:nth-child(7) {
-    right: 70px;
+    right: 9.06229vw;
 }
 
 #slideNav2 > a:nth-child(8) {
-    right: 42px;
+    right: 7.60399vw;
 }
 
 #slideNav2 > a:nth-child(9) {
-    right: 14px;
+    right: 6.14569vw;
+}
+
+#slideNav2 > a:nth-child(10) {
+    right: 4.68739vw;
+}
+
+#slideNav2 > a:nth-child(11) {
+    right: 3.22909vw;
+}
+
+#slideNav2 > a:nth-child(12) {
+    right: 1.77079vw;
 }
 
 #slideNav2 div {
     position: absolute;
-    margin: 0 0 0 -1px;
+    margin: 0 0 0 -0.05208vw;
     padding: 0;
     width: 100%;
     height: 100%;
@@ -145,48 +156,60 @@ section:nth-child(4) {
     display: none;
     opacity: .7;
     background-size: 110%;
-    width: 90px;
+    width: 4.6875vw;
     height: 100%;
     border: 1px solid white;
-    border-radius: 10px;
+    border-radius: 0.52083vw;
     padding: 0;
     margin: 0;
 }
 
 #slideNav2 div a:nth-child(1) {
-    right: 198px;
+    right: 15.75vw;
 }
 
 #slideNav2 div a:nth-child(2) {
-    right: 170px;
+    right: 14.25vw;
 }
 
 #slideNav2 div a:nth-child(3) {
-    right: 142px;
+    right: 12.75vw;
 }
 
 #slideNav2 div a:nth-child(4) {
-    right: 114px;
+    right: 11.25vw;
 }
 
 #slideNav2 div a:nth-child(5) {
-    right: 86px;
+    right: 9.8vw;
 }
 
 #slideNav2 div a:nth-child(6) {
-    right: 58px;
+    right: 8.3vw;
 }
 
 #slideNav2 div a:nth-child(7) {
-    right: 30px;
+    right: 6.85vw;
 }
 
 #slideNav2 div a:nth-child(8) {
-    right: 2px;
+    right: 5.4vw;
 }
 
 #slideNav2 div a:nth-child(9) {
-    right: -26px;
+    right: 3.95vw;
+}
+
+#slideNav2 div a:nth-child(10) {
+    right: 2.6vw;
+}
+
+#slideNav2 div a:nth-child(11) {
+    right: 1.2vw;
+}
+
+#slideNav2 div a:nth-child(12) {
+    right: -0.45vw;
 }
 
 #marco:hover #slideNav1 a {
@@ -205,20 +228,20 @@ section:nth-child(4) {
     border: 1px solid orange;
 }
 
-section:nth-child(4) > a {
+section:nth-of-type(2) > a {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 3.125vw;
+    height: 3.125vw;
     top: 6%;
     right: 10%;
     opacity: .5;
 }
 
-section:nth-child(4) > a:hover {
+section:nth-of-type(2) > a:hover {
     opacity: 1;
 }
 
-section:nth-child(4) > a img {
+section:nth-of-type(2) > a img {
     width: 100%;
     height: 100%;
 }
@@ -263,7 +286,8 @@ section:nth-child(4) > a img {
 }
 
 /*Chrome*/
-@-webkit-keyframes fromLeftToCenterC {
+/*Estás reglas dan error en el validador de CSS porque dice que las keyframes con el prefijo -webkit- no están implementadas todavía. Sin embargo, en w3schools las ponen de ejemplo de animación para Chrome. Por lo tanto, siguiendo los consejos de w3schools he decidido implementarlas para el slider.*/
+/*@-webkit-keyframes fromLeftToCenterC {
     0% {
         left: -100%;
     }
@@ -297,4 +321,4 @@ section:nth-child(4) > a img {
     100% {
         left: -100%;
     }
-}
+}*/

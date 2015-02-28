@@ -49,7 +49,7 @@ function relRoutes() {
 
 function loadPreview() {
     for (i = 0; i < imagesRoutes.length; i++) {
-        nav2Links[i + 9].style.backgroundImage = 'url(' + imagesRoutes[i] + ')';
+        nav2Links[i + 12].style.backgroundImage = 'url(' + imagesRoutes[i] + ')';
     }
 }
 
@@ -163,14 +163,14 @@ function toggleSlider() {
 function activPreview(i) {
     return function () {
         if (i != currPhotoIndex) {
-            nav2Links[i + 9].style.display = "initial";
+            nav2Links[i + 12].style.display = "initial";
         }
     };
 }
 
 function deactivPreview(i) {
     return function () {
-        nav2Links[i + 9].style.display = "none";
+        nav2Links[i + 12].style.display = "none";
     };
 }
 

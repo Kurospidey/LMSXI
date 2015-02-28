@@ -1,20 +1,21 @@
-::selection {
-    background-color: #1d18a5;
-    color: #ffd85c;
-}
-
-section#troncal {
-    margin-top: 5%;
+#troncal > article {
     font-family: 'Baqacents';
     text-align: justify;
-    font-size: 1.3em;
-    font-weight: bold;
+    font-size: 1.1458vw;
 }
 
-    section#troncal header > img {
-        width: 100%;
-    }
+#troncal > article:first-of-type {
+    margin-top: 2.5vw;
+}
 
-body > footer {
-    margin-top: 2%;
+#troncal > article > header {
+    margin-bottom: 0.75vw;
+}
+
+#troncal > article > header > img {
+    width: 100%;
+}
+
+#troncal > article > p {
+    margin-bottom: 0.5vw;
 }

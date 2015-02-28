@@ -63,8 +63,14 @@ body {
     padding: 0;
 }
 
+/*Ajusta el color del texto y de fondo cuando se selecciona algo.*/
+::-moz-selection {
+    background-color: #1d18a5;
+    color: #ffd85c;
+}
+
 /*Todas las páginas se componen de cuatro elementos principales: un banner, una barra de navegación, una sección troncal, y un pie.*/
-/*Utilizo la medida relativa vw porque escala las fuentes para diferentes resoluciones y tamaños de ventana.*/
+/*Utilizo la medida relativa vw (viewport width) porque escala las fuentes y los bordes redondeados para diferentes resoluciones y tamaños de ventana.*/
 
             /*BANNER*/
 
@@ -75,11 +81,13 @@ body > header {
 
 body > header > img {
     width: 100%;
+    margin: 0%;
 }
 
             /*BARRA DE NAVEGACIÓN*/
 
 body > nav {
+    float: left;
     margin-left: 15%;
     width: 70%;
     text-align: center;
@@ -92,7 +100,7 @@ body > nav {
     position: relative; /*necesito posicionar cada opción con relative para hacer de referencia, porque los submenús están en absolute*/
     float: left;
     width: 20%;
-    margin-top: 1%;
+    /*margin-top: 1%;*/
     border-bottom: 1px solid #AAAAAA;
 }
 
@@ -110,7 +118,7 @@ body > nav {
     left: 0%;
     top: 100%; /*pongo cada submenú justo debajo de su opción.*/
     display: none; /*no se muestra hasta que se haga hover sobre opcion...*/
-    z-index: 1; /*... y tiene que aparecer por encima de las noticias de abajo.*/
+    z-index: 4; /*... y tiene que aparecer por encima de las noticias de abajo.*/
     background-image: url('../img/fondos/RandomPattern1.png');
     background-position: top left;
     background-repeat: repeat;
@@ -143,9 +151,11 @@ body > nav {
             /*SECCIÓN TRONCAL*/
 
 body > #troncal {
-    clear: left; /*despeja el comportamiento float de la barra de navegación.*/
+    float: left;
     width: 70%;
+    text-align: center;
     margin-left: 15%;
+    margin-bottom: 3vw;
 }
 
             /*PIE*/
@@ -155,49 +165,116 @@ body > footer {
     position: relative; /*hace de refencia a los img con position absolute.*/
     background-color: #D6D6D6;
     font-size: 1vw; /*19.2px en un ancho de 1920;*/
-    border-radius: 10px 10px 0 0;
+    border-radius: 1vw 1vw 0 0;
     bottom: 0%;
     width: 100%;
+    padding: 0.5% 0 1% 0;
 }
 
-/*Menús y submenús*/
+/*Breadcrumbs*/
+#breadcrumbs {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    font-size: 0.70vw;
+}
+
+#breadcrumbs > li {
+    display: inline-block;
+    margin-left: -5%;
+    padding: 4% 0;
+}
+
+#breadcrumbs > li:first-of-type {
+    margin-left: 0%;
+}
+
+#breadcrumbs > li > a {
+    display: inline-block;
+    float: left;
+}
+
+#breadcrumbs > li > a > img {
+    float: left;
+    height: 1vw;
+}
+
+#breadcrumbs > li > a > span {
+    display: inline-block;
+    float: left;
+    background-color: #B3A595;
+    height: 1vw;
+    padding: 3% 0%;
+}
+
+#breadcrumbs > li:last-of-type > a > span {
+    color: white;
+    background-color: #000000;
+}
+
+/*Menús*/
+body > footer > address {
+    display: inline-block;
+    border-right: 1px solid #AAAAAA;
+    padding: 1% 1% 0 1%;
+    width: 13%;
+    margin-left: 11.5%;
+}
+
+body > footer > address > #social {
+    font-style: normal;
+}
+
 body > footer > dl {
     display: inline-block;
     border-right: 1px solid #AAAAAA;
-    padding: 1% 1%;
-}
-
-body > footer > dl:first-of-type {
-    margin-left: 14.5%;
-    list-style-type: disc;
-}
-
-body > footer > dl:first-of-type > dd {
-    display: list-item;
-}
-
-body > footer > dl:first-of-type > dd:first-of-type {
-    background-image: url('../img/galeria/TwitterLogo2c.png')
-    /*list-style-image: url('../img/galeria/TwitterLogo2c.png');*/
-}
-
-body > footer > dl > dt {
-    font-weight: bold;
+    padding: 1% 1% 0 1%;
+    width: 12.5%;
 }
 
 body > footer > dl:last-of-type {
     border: none;
 }
 
-/*Imágenes decorativas*/
-body > footer > img:first-child {
-    position: absolute;
-    width: 15%;
-    bottom: 0%;
+/*Opciones*/
+body > footer dl > dt {
+    font-weight: bold;
 }
 
-body > footer > img:last-child {
+body > footer dl > dt, body > footer dl > dd {
+    margin-bottom: 2%
+}
+
+/*Enlaces*/
+#social > dd > a {
+    position: relative;
+}
+
+/*Hay dos imágenes. La que está por debajo (la que no tiene position absolute) se revela al hacer hover sobre el enlace.*/
+#social > dd > a > img {
     position: absolute;
-    width: 10%;
+    left: -1.25vw;
+    bottom: 0%;
+    width: 1.1vw;
+    /*vertical-align: bottom;*/
+}
+
+#social > dd > a:hover > img:nth-child(2) {
+    opacity: 0;
+}
+
+body > footer dl > dt > a:hover {
+    color: #05345f;
+}
+
+body > footer dl > dd > a:hover {
+    color: #0b5699;
+}
+
+/*Imágenes decorativas*/
+body > footer > img:last-of-type {
+    position: absolute;
+    right: 2%;
+    width: 11%;
     bottom: 0%;
 }

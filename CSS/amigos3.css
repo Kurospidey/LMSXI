@@ -1,154 +1,179 @@
 /*FORMULARIO*/
 
-    /*Al tener los input dentro de un label, si se clica en el texto del label, se selecciona el input, por eso le cambio el cursor a pointer, para que se vea mejor.*/
-section#formulario {
-    margin-top: 4%;
+/*Al tener los input dentro de un label, si se clica en el texto del label, se selecciona el input, por eso le cambio el cursor a pointer, para que se vea mejor.*/
+form label {
+    cursor: pointer;
 }
 
-    section#formulario label {
-        cursor: pointer;
-    }
+/*Estoy utilizando pseudo-elementos para quitar las flechitas que aparecen en los input tipo número en el Chrome y en el Firefox.*/
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
-    /*Estoy utilizando pseudo-elementos para quitar las flechitas que aparecen en los input tipo número en el Chrome y en el Firefox.*/
-    input[type=number]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
-    input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
+input[type=number]::-moz-inner-spin-button {
+    -moz-appearance: none;
+    margin: 0;
+}
 
-    input[type=number]::-moz-inner-spin-button {
-        -moz-appearance: none;
-        margin: 0;
-    }
+input[type=number]::-moz-outer-spin-button {
+    -moz-appearance: none;
+    margin: 0;
+}
 
-    input[type=number]::-moz-outer-spin-button {
-        -moz-appearance: none;
-        margin: 0;
-    }
+input[type=number] {
+    -moz-appearance: textfield;
+}
 
-    input[type=number] {
-        -moz-appearance: textfield;
-    }
-
-section#formulario {
-    width: 70%;
-    margin-left: 15%;
+/*Ajusto márgenes y anchura del formulario. La fuente escala según el tamaño de la ventana o la resolución del monitor.*/
+form {
+    margin-top: 2.5vw;
     font-family: 'Baqacents';
-    margin-bottom: 5%;
+    font-size: 1vw;
 }
 
-    section#formulario > form > ul {
-        position: relative;
-        width: 50%;
-        left: 25%;
-    }
+form > ul {
+    position: relative;
+    width: 60%;
+    left: 20%;
+}
 
-    section#formulario > form > ul > li {
-        display: inline-block;
-        position: relative;
-        width: 100%;
-    }
+form > ul > li {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
 
-    section#formulario > form > ul > li:nth-last-child(2) {
-        position: initial;
-        float: left;
-        width: 25%;
-        margin-left: 25%;
-        text-align: center;
-    }
+/*Ajusto la posición de los dos botones del final.*/
+form > ul > li:nth-last-child(2) {
+    position: initial;
+    float: left;
+    width: 25%;
+    margin-left: 25%;
+    text-align: center;
+}
 
-    section#formulario > form > ul > li:nth-last-child(1) {
-        position: initial;
-        width: 25%;
-        text-align: center;
-    }
+form > ul > li:nth-last-child(1) {
+    position: initial;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
 
-        section#formulario > form > ul > li:nth-child(1) > img {
-            position: absolute;
-            width: 94px;
-            left: -16%;
-            top: 15%;
-        }
+/*Las imágenes de cada fieldset también escalan.*/
+form > ul > li:nth-child(1) > img {
+    position: absolute;
+    width: 4.89583vw;
+    left: -16%;
+    top: 15%;
+}
 
-        section#formulario > form > ul > li:nth-child(2) > img {
-            position: absolute;
-            width: 94px;
-            left: -16%;
-            top: 15%;
-        }
+form > ul > li:nth-child(2) > img {
+    position: absolute;
+    width: 4.89583vw;
+    left: -16%;
+    top: 15%;
+}
 
-        section#formulario > form > ul > li:nth-child(3) > img {
-            position: absolute;
-            width: 94px;
-            left: -16%;
-            top: 15%;
-        }
+form > ul > li:nth-child(3) > img {
+    position: absolute;
+    width: 4.89583vw;
+    left: -16%;
+    top: 15%;
+}
 
-        li > fieldset {
-            background-color: #FFF4E6;
-            margin: 0 0 2% 0;
-            padding: 2%;
-            border: 1px solid #936f00;
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 3px;
-            box-shadow: inset 0px 0px 15px #bc8f00;
-            -webkit-box-shadow: inset 0px 0px 15px #bc8f00;
-            -moz-box-shadow: inset 0px 0px 15px #bc8f00;
-        }
+/*Configuración de los fieldsets y sus contenidos. Todo es escalable.*/
+li > fieldset {
+    background-color: #FFF4E6;
+    margin: 0 0 2% 0;
+    padding: 2%;
+    border: 1px solid #936f00;
+    border-radius: 0.52083vw;
+    -webkit-border-radius: 0.52083vw;
+    -moz-border-radius: 0.52083vw;
+    box-shadow: inset 0px 0px 0.78125vw #bc8f00;
+    -webkit-box-shadow: inset 0px 0px 0.78125vw #bc8f00;
+    -moz-box-shadow: inset 0px 0px 0.78125vw #bc8f00;
+}
 
-            li > fieldset > legend {
-                background-color: #FFF4E6;
-                border-top: 1px solid #936f00;
-                border-left: 1px solid #936f00;
-                border-right: 1px solid #936f00;
-                border-radius: 5px 5px 0 0;
-                -webkit-border-radius: 5px 5px 0 0;
-                -moz-border-radius: 3px;
-                padding: 0 8px 3px 8px;
-                box-shadow: inset -0px -1px 2px #bc8f00;
-                -webkit-box-shadow: inset -0px 1px 2px #bc8f00;
-                -moz-box-shadow: inset -0px -1px 2px #bc8f00;
-            }
+/*Efecto de pestaña para cada leyenda de los 3 fieldsets principales.*/
+li > fieldset > legend {
+    background-color: #FFF4E6;
+    border-top: 1px solid #936f00;
+    border-left: 1px solid #936f00;
+    border-right: 1px solid #936f00;
+    border-radius: 0.26042vw 0.26042vw 0 0;
+    -webkit-border-radius: 0.26042vw 0.26042vw 0 0;
+    -moz-border-radius: 0.26042vw 0.26042vw 0 0;
+    padding: 0 8px 3px 8px;
+    box-shadow: inset 0px 1px 2px #bc8f00;
+    -webkit-box-shadow: inset 0px 1px 2px #bc8f00;
+}
 
-            li > fieldset > label {
-                display: block;
-            }
+/*Cada campo del formulario ocupa una línea.*/
+li > fieldset > label {
+    display: block;
+}
 
-                li > fieldset > label > span {
-                    display: inline-block;
-                    width: 33%;
-                }
+/*Así consigo que los campos a rellenar de la derecha estén alineados.*/
+li > fieldset > label > span {
+    display: inline-block;
+    width: 33%;
+}
 
-                li > fieldset > label > select, li > fieldset > label > input {
-                    border: 1px solid #935600;
-                    border-radius: 3px;
-                    -webkit-border-radius: 3px;
-                    -moz-border-radius: 3px;
-                    box-shadow: inset 1px 1px 4px #bc6e00;
-                    -webkit-box-shadow: inset 1px 1px 4px #bc6e00;
-                    -moz-box-shadow: inset 1px 1px 4px #bc6e00;
-                    width: 50%;
-                    padding: 1% 1%;
-                    margin-bottom: 2%;
-                }
+li > fieldset > label > select, li > fieldset > label > input {
+    border: 1px solid #935600;
+    border-radius: 0.15625vw;
+    -webkit-border-radius: 0.15625vw;
+    -moz-border-radius: 0.15625vw;
+    box-shadow: inset 1px 1px 0.2083vw #bc6e00;
+    -webkit-box-shadow: inset 1px 1px 0.2083vw #bc6e00;
+    -moz-box-shadow: inset 1px 1px 0.2083vw #bc6e00;
+    width: 50%;
+    padding: 1% 1%;
+    margin-bottom: 2%;
+    font-size: 1vw; /*para que también escalen las letras del formulario.*/
+}
 
-                li > fieldset > label > input[type="checkbox"] {
-                    width: initial;
-                }
+li > fieldset > label > input[type="checkbox"] {
+    width: initial;
+}
 
-            fieldset > fieldset {
-                border: none;
-            }
+fieldset > fieldset { /*este subfieldset no tiene los mismos efectos que el padre.*/
+    border: none;
+}
 
-        form > ul > li > input[type="reset"] , form > ul > li > input[type="submit" {
-            border: 1px solid black;
-            padding: 1% 3%;
-            box-shadow: inset -1px -1px 3px #000000;
-            -webkit-box-shadow: inset -1px -1px 3px #000000;
-            -moz-box-shadow: inset -1px -1px 3px #000000;
-        }
+/*Configuración de los dos botones finales.*/
+form > ul > li > input[type="reset"], form > ul > li > input[type="submit"] {
+    border: 1px solid black;
+    padding: 1% 3%;
+    box-shadow: inset -1px -1px 0.15625vw #000000;
+    -webkit-box-shadow: inset -1px -1px 0.15625vw #000000;
+    -moz-box-shadow: inset -1px -1px 0.15625vw #000000;
+    font-size: 1vw;
+}
+
+/*Cambio el estilo para el campo que este en focus.*/
+select:focus, input:focus {
+    background-color: rgba(188, 59, 0, 0.5);
+    border: 1px solid #555555;
+    box-shadow: inset 1px 1px 0.2083vw #932e00;
+    -webkit-box-shadow: inset 1px 1px 0.2083vw #932e00;
+    -moz-box-shadow: inset 1px 1px 0.2083vw #932e00;
+}
+
+/*Configuración del texto orientativo que aparece en los inputs.*/
+::-moz-placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+    font-weight: bold;
+}
