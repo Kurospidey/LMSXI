@@ -1,3 +1,16 @@
+/*
+
+            //################################################//
+            //#                                              #//
+            //#      TRABAJO SEGUNDA EVALUACIÓN LMSXI        #//
+            //#                                              #//
+            //#      Archivo: index.css                      #//
+            //#      Autor: Francisco J. Pájaro Rives        #//
+            //#      Última modificación: 2015-02-28         #//
+            //#                                              #//
+            //################################################//
+*/
+
             /*NOTICIAS*/
 
 .noticia { /*article dentro de un li*/
@@ -64,10 +77,10 @@
 
 .noticia > .entradilla > p {
     font-family: 'Baqacents';
-    font-size: 0.92vw; /*17.6px en un ancho de 1920*/
+    font-size: 0.92vw; /*18px en un ancho de 1920*/
 }
 
-.noticia > a {
+.noticia > a { /*el enlace abarca todo el elemento article*/
     position: absolute;
     width: 100%;
     height: 100%;
@@ -77,6 +90,7 @@
 
             /*AJUSTES INDIVIDUALES*/
 
+/*Las dos primeras noticias tienen un ancho mayor para reflejar una mayor importancia.*/
 #troncal > ul > li:nth-child(1) > .noticia {
     width: 49%;
     margin-right: 2%;
@@ -87,6 +101,7 @@
     margin-right: 2%;
 }
 
+/*Con esto le estoy diciendo que todas las imágenes de la derecha de todo (la 2ª, la 6ª, etc.) no tienen ningún margen a la derecha.*/
 #troncal > ul > li:nth-child(4n + 2) > .noticia {
     margin-right: 0%;
 }

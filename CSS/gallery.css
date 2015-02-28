@@ -5,7 +5,7 @@
             //#                                              #//
             //#      Archivo: gallery.css                    #//
             //#      Autor: Francisco J. Pájaro Rives        #//
-            //#      Última modificación: 2015-02-16         #//
+            //#      Última modificación: 2015-02-28         #//
             //#                                              #//
             //################################################//
 */
@@ -29,6 +29,7 @@
     margin-top: 5vw;
 }
 
+/*Posiciono la 1ª y la 3ª columnas un poquito más hacia arriba que la del medio.*/
 .contenedor:nth-of-type(3n+1) {
     bottom: 2vw;
 }
@@ -49,7 +50,7 @@
 /*Elemento faldon con los enlaces.*/
 .faldon {
     position: absolute;
-    overflow: hidden; /*para que no se vea compartir*/
+    overflow: hidden; /*para que no se vea compartir, que inicialmente está fuera de la caja.*/
     width: 96%;
     height: 94.5%;
     top: 2.75%;
@@ -64,7 +65,7 @@
     right: 0.5%;
     width: 2.6042vw;
     height: 2.6042vw;
-    opacity: 0;
+    opacity: 0; /*comienza oculto*/
     background-image: url('../img/galeria/Ampliar1.png');
     -webkit-transition: opacity 3s ease;
     -moz-transition: opacity 3s ease;

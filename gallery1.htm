@@ -5,7 +5,7 @@
             //#                                              #//
             //#      Archivo: gallery1.htm                   #//
             //#      Autor: Francisco J. Pájaro Rives        #//
-            //#      Última modificación: 2015-02-16         #//
+            //#      Última modificación: 2015-02-28         #//
             //#                                              #//
             //################################################//
 -->
@@ -14,6 +14,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
     <head>
         <meta charset="UTF-8">
         <title>Galería de imágenes</title>
@@ -21,10 +22,13 @@
         <link rel="stylesheet" type="text/css" href="CSS/gallery.css" /> <!--CSS de la galería.-->
         <link rel="stylesheet" type="text/css" href="CSS/slide.css" /> <!--CSS de la caja del slider que solapa la galería.-->
     </head>
+
     <body>
+
         <header>
             <img src="img/banners/Banner2.png" alt = "banner" />
         </header>
+
         <nav>
             <ul>
                 <li class="opcion">
@@ -70,14 +74,14 @@
             </ul>
         </nav>
 
-
         <section id="troncal">
             <ul>
                 <li class="contenedor">
-                    <!--Faldón que solapa parcialmente la imagen cuando se hace hover.-->
+                    <!--div necesario para simular un borde redondeado (lo hago con una imagen de fondo toda transparente excepto por un borde amarillo). Esto es necesario porque el Chrome no asimila bien los bordes redondeados y los transform del CSS3.-->
                     <div class="marco"></div>
+                    <!--Faldón que solapa parcialmente la imagen cuando se hace hover con enlaces para ampliar y compartir la imagen.-->
                     <div class="faldon">
-                        <a class="ampliar" href="#"></a> <!--Hace visible la caja del slider.-->
+                        <a class="ampliar" href="#"></a> <!--Al clicar hace visible la caja del slider.-->
                         <!--Me comentaste en clase que tenía que ser address, pero mirando la documentación, un elemento address implica información de contacto del autor de la imagen. Estos enlaces no dirigen a nada que tenga que ver con la web ni con su autor, sino a las cuentas de las distintas redes sociales del usuario que clica (para que comparta la imagen).-->
                         <div class="compartir"> <!--Contiene enlaces a redes sociales para compartir la imagen.-->
                             <ul>
@@ -273,12 +277,12 @@
 
         <!--La segunda sección contiene la caja donde está el slider. Inicialmente no está visible (se activa con Javascript).-->
         <section>
-            <div id="marco"> <!--Marco por el que se visualizan las distintas imágenes que se van moviendo.-->
+            <div id="marco"> <!--Marco por el que se visualizan las distintas imágenes que se van moviendo. No confundir con los divs de clase marco.-->
                 <!--Estos tres divs se mueven con @keyframes y contienen las imágenes del slider.-->
                 <div></div>
                 <div></div>
                 <div></div>
-                <!--Primera caja de navegación, donde están los botones de: play, pausa, avanzado, retroceso.-->
+                <!--Primera caja de navegación, donde están los botones de: play, pausa, avance, y retroceso.-->
                 <nav id="slideNav1">
                     <a href="#"></a>
                     <a href="#"></a>
@@ -286,6 +290,7 @@
                 </nav>
                 <!--Segunda caja de navegación, donde se encuentran los botones para ir a cualquier imagen de la actual página de la galería y sus imágenes de previsualización-->
                 <nav id="slideNav2">
+                    <!--botones-->
                     <a href="#"></a>
                     <a href="#"></a>
                     <a href="#"></a>
@@ -298,6 +303,7 @@
                     <a href="#"></a>
                     <a href="#"></a>
                     <a href="#"></a>
+                    <!--imágenes de previsualización-->
                     <div>
                         <a href="#"></a>
                         <a href="#"></a>
@@ -316,6 +322,7 @@
             </div>
             <a href="#"><img src="img/galeria/X1.png" alt="cierre" /></a> <!--Botón para ocultar el slider.-->
         </section>
+
         <footer>
             <ul id="breadcrumbs">
                 <li>
@@ -387,6 +394,9 @@
             </dl>
             <img src="img/renders/Catedral1.png" alt="prueba" />
         </footer>
+
         <script src="scripts/script1.js"></script>
+
     </body>
+
 </html>

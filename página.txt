@@ -1,5 +1,0 @@
-Tengo que intentar que tenga todas las etiquetas estructurales de HMTL5
-
-También que tenga un formulario, una galería, vídeos, muestras de sonido...
-
-transition, keyframes, transform, parallax, shadows

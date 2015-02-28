@@ -1,3 +1,15 @@
+/*
+            //################################################//
+            //#                                              #//
+            //#      TRABAJO SEGUNDA EVALUACIÓN LMSXI        #//
+            //#                                              #//
+            //#      Archivo: amigos2.css                    #//
+            //#      Autor: Francisco J. Pájaro Rives        #//
+            //#      Última modificación: 2015-02-28         #//
+            //#                                              #//
+            //################################################//
+*/
+
 table {
     margin-top: 2.5vw;
     border-spacing: 0.52083vw;
@@ -6,7 +18,7 @@ table {
 
 table caption {
     font-size: 7vw;
-    font-family: 'C&L';
+    font-family: 'Roboto';
 }
 
 table th, table td {

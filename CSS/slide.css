@@ -1,3 +1,16 @@
+/*
+            //################################################//
+            //#                                              #//
+            //#      TRABAJO SEGUNDA EVALUACIÓN LMSXI        #//
+            //#                                              #//
+            //#      Archivo: slide.css                      #//
+            //#      Autor: Francisco J. Pájaro Rives        #//
+            //#      Última modificación: 2015-02-28         #//
+            //#                                              #//
+            //################################################//
+*/
+
+/*La 2ª sección es la del slider, que está inicialmente oculta.*/
 section:nth-of-type(2) {
     position: fixed;
     overflow: hidden;
@@ -22,6 +35,7 @@ section:nth-of-type(2) {
     overflow: hidden;
 }
 
+/*De los tres divs de dentro del marco, solo se ve uno. Los otros dos están a la izquierda y a la derecha (con estos tres me es suficiente para crear un efecto slider.*/
 #marco div {
     position: absolute;
     width: 100%;
@@ -36,6 +50,7 @@ section:nth-of-type(2) {
     left: 100%;
 }
 
+/*1ª barra de navegación del slider, con los botones de play, pausa, avance, y retroceso.*/
 #marco #slideNav1 {
     position: absolute;
     width: 100%;
@@ -71,6 +86,7 @@ section:nth-of-type(2) {
     background-image: url('../img/galeria/PlayButton1.png');
 }
 
+/*2ª barra de navegación del slider, con los botones para ir a cualquier imagen de la actual página de la galería. Además tiene imágenes en miniatura de previsualización.*/
 #marco #slideNav2 {
     position: absolute;
     right: 6%;
@@ -81,6 +97,7 @@ section:nth-of-type(2) {
     margin: 0;
 }
 
+/*Botones*/
 #slideNav2 > a {
     position: absolute;
     opacity: 0;
@@ -141,6 +158,7 @@ section:nth-of-type(2) {
     right: 1.77079vw;
 }
 
+/*div donde están las imágenes de previsualización*/
 #slideNav2 div {
     position: absolute;
     margin: 0 0 0 -0.05208vw;
@@ -151,6 +169,7 @@ section:nth-of-type(2) {
     list-style-type: none;
 }
 
+/*imágenes de previsualización*/
 #slideNav2 div a {
     position: absolute;
     display: none;
@@ -212,6 +231,7 @@ section:nth-of-type(2) {
     right: -0.45vw;
 }
 
+/*Si se está fuera del marco, ambas barras de navegación están ocultas.*/
 #marco:hover #slideNav1 a {
     opacity: .2;
 }
@@ -228,6 +248,7 @@ section:nth-of-type(2) {
     border: 1px solid orange;
 }
 
+/*botón para cerrar el slider*/
 section:nth-of-type(2) > a {
     position: absolute;
     width: 3.125vw;
@@ -248,6 +269,7 @@ section:nth-of-type(2) > a img {
 
 /*ANIMACIONES*/
 
+/*Solo funcionan en Firefox.*/
 @keyframes fromLeftToCenter {
     0% {
         left: -100%;

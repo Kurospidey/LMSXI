@@ -1,3 +1,19 @@
+/*
+            //################################################//
+            //#                                              #//
+            //#      TRABAJO SEGUNDA EVALUACIÓN LMSXI        #//
+            //#                                              #//
+            //#      Archivo: noticia.css                    #//
+            //#      Autor: Francisco J. Pájaro Rives        #//
+            //#      Última modificación: 2015-02-28         #//
+            //#                                              #//
+            //################################################//
+*/
+
+            /*////////////////
+            //  ARTÍCULO    //
+            ////////////////*/
+
 /*El artículo que constituye la noticia, que está formado por: un div con diversos enlaces e información, un titular, una imagen, y los párrafos con el texto.*/
 #noticia {
     text-align: justify;
@@ -8,6 +24,10 @@
     -webkit-box-shadow: 0px 0px 25px #aaaaaa;
     -moz-box-shadow: 0px 0px 25px #aaaaaa;
 }
+
+            /*///////////////////////////////
+            //  DIV CON METAINFORMACIÓN    //
+            ///////////////////////////////*/
 
 /*Este elemento no tiene ningún valor semántico, simplemente visual.*/
 #noticia > div {
@@ -41,8 +61,6 @@
 }
 
 #noticia > div > address > a > img {
-    position: relative;
-    left: -5%;
     width: 110%;
 }
 
@@ -106,6 +124,10 @@
     background-color: #1e4863;
 }
 
+            /*///////////////////
+            //  INFORMACIÓN    //
+            ///////////////////*/
+
 /*Acaba la meta-información, ahora empieza la noticia en sí.*/
 #noticia > h1 {
     font-family: 'Roboto';
@@ -124,8 +146,8 @@
 }
 
 #noticia > figure > img {
-    width: 66.7%;
     border: 1px solid #AAAAAA;
+    max-width: 66.7%;
 }
 
 #noticia > p {

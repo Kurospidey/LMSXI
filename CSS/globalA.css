@@ -1,3 +1,15 @@
+/*
+            //################################################//
+            //#                                              #//
+            //#      TRABAJO SEGUNDA EVALUACIÓN LMSXI        #//
+            //#                                              #//
+            //#      Archivo: globalA.css                    #//
+            //#      Autor: Francisco J. Pájaro Rives        #//
+            //#      Última modificación: 2015-02-28         #//
+            //#                                              #//
+            //################################################//
+*/
+
             /*FUENTES*/
 
 /*Para la barra de navegación principal.*/
@@ -120,7 +132,6 @@ body > nav {
     text-align: center;
     font-family: 'Euphorigenic';
     font-size: 1.5vw; /*1em son 16px; 1.25vw son 24px en un ancho de 1920px (mi monitor), 12.8px en un ancho de 1024px (el monitor del proyector).*/
-    /*border: 1px solid #AAAAAA;*/
     border-radius: 10px 10px 0 0;
 }
 
@@ -133,7 +144,7 @@ body > nav {
 }
 
 .opcion > a {
-    display: inline-block; /*quiero que el comportamiento hover afecte a todo el ancho de la opción, no solo al ancho des letras del enlace.*/
+    display: inline-block; /*quiero que el comportamiento hover afecte a todo el ancho de la opción, no solo al ancho de las letras del enlace.*/
     width: 100%;
     padding: .2em 0;
     border-radius: 10px 10px 0 0;
@@ -146,11 +157,12 @@ body > nav {
     left: 0%;
     top: 100%; /*pongo cada submenú justo debajo de su opción.*/
     display: none; /*no se muestra hasta que se haga hover sobre opcion...*/
-    z-index: 4; /*... y tiene que aparecer por encima de las noticias de abajo.*/
+    z-index: 4; /*... y tiene que aparecer por encima del texto de abajo.*/
     background-image: url('../img/fondos/RandomPattern1.png');
     background-position: top left;
     background-repeat: repeat;
     background-size: 30px 30px;
+    /*sombra anaranjada*/
     box-shadow: 0px 0px 5px #932e00;
     -webkit-box-shadow: 0px 0px 5px #932e00;
     -moz-box-shadow: 0px 0px 5px #932e00;
@@ -200,7 +212,7 @@ body > footer {
     font-family: 'Times New Roman';
 }
 
-/*Breadcrumbs*/
+/*Breadcrumbs (migas de pan, para seguir el rastro de donde estamos).*/
 #breadcrumbs {
     position: absolute;
     top: 1%;
@@ -274,7 +286,6 @@ body > footer dl > dt, body > footer dl > dd {
     margin-bottom: 2%
 }
 
-/*Ees*/
 #social > dd > a {
     width: 100%;
     position: relative;
@@ -286,7 +297,6 @@ body > footer dl > dt, body > footer dl > dd {
     left: -1.25vw;
     bottom: 0%;
     width: 1.1vw;
-    /*vertical-align: bottom;*/
 }
 
 #social > dd > a:hover > img:nth-child(2) {
@@ -301,22 +311,10 @@ body > footer dl > dd > a:hover {
     color: #0b5699;
 }
 
-/*Imágenes decorativas*/
+/*Imagen decorativa*/
 body > footer > img:last-of-type {
     position: absolute;
     right: 2%;
     width: 11%;
     bottom: 0%;
 }
-
-/*svg {
-    position: relative;
-    width: 100%;
-    height: 1%;
-    z-index: 5;
-}
-
-svg > line {
-    stroke: #0e0a66;
-    stroke-width: 2;
-}*/
