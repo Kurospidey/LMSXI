@@ -161,6 +161,10 @@
     font-size: 3vw;
 }
 
+#noticia > p:last-of-type {
+    margin-bottom: 3.75vw;
+}
+
 /*Navegación secundaria, para recorrer las noticias una a una dentro del mismo nivel.*/
 #troncal > nav > a {
     position: fixed;
